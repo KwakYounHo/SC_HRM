@@ -18,8 +18,17 @@ export async function GET() {
   });
 
   if (error) {
-    console.error(error);
-    return redirect("/test?message=insert failed");
+    switch (error.message) {
+      case 'new row violates row-level security policy "재직중인 사람만 작업 가능" for table "commute"':
+        return redirect("/test?message=access denied");
+      case "something error":
+        console.error(error);
+        return redirect("/test?message=unknown error");
+      case "today departure is already recorded":
+        return redirect("/test?message=already departure");
+      case "please retry after 2minute":
+        return redirect("/test?message=please retry after 2minute");
+    }
   }
 
   return redirect("/");
