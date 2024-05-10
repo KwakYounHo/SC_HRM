@@ -1,6 +1,6 @@
-import Header from "../components/header";
+import Header from "@/components/header";
 import Homepage from "@/app/components/homepage";
-import Footer from "../components/footer";
+import Footer from "@/components/footer";
 
 export default function Index() {
   return (
