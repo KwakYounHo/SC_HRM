@@ -87,12 +87,6 @@ export type Database = {
         }
         Returns: string
       }
-      test_function: {
-        Args: {
-          time_data: string
-        }
-        Returns: boolean
-      }
       user_name_return: {
         Args: {
           id: string

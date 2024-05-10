@@ -80,7 +80,7 @@ export default async function AuthButton(): Promise<JSX.Element> {
       <form action={signOut}>
         <button
           className={
-            "border rounded-md py-1 px-2 hover:bg-slate-700 hover:text-white"
+            "border rounded-md py-1 px-2 hover:bg-slate-500 hover:text-white"
           }
         >
           Logout
@@ -92,7 +92,7 @@ export default async function AuthButton(): Promise<JSX.Element> {
       <div className={"h-full flex items-center"}>
         <button
           className={
-            "border rounded-md py-1 px-2 hover:bg-slate-700 hover:text-white"
+            "border rounded-md py-1 px-2 hover:bg-slate-500 hover:text-white transition-colors"
           }
         >
           Login
