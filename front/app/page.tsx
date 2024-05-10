@@ -1,4 +1,4 @@
-import { Header } from "@/components/header";
+import Header from "@/components/header";
 import Homepage from "@/app/components/homepage";
 import Footer from "@/components/footer";
 

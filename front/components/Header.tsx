@@ -1,7 +1,7 @@
 import Link from "next/link";
 import AuthButton from "@/components/authButton";
 
-export function Header() {
+export default function Header() {
   return (
     <header
       className={
