@@ -60,13 +60,19 @@ export default async function AuthButton(): Promise<JSX.Element> {
           );
         } else {
           return (
-            <p className={"border rounded-md text-xs px-1 bg-green-500/30"}>
-              Commute
-            </p>
+            <a href="/commute">
+              <p className={"border rounded-md text-xs px-1 bg-green-500/30"}>
+                Commute
+              </p>
+            </a>
           );
         }
       } else {
-        return <p className={"border rounded-md text-xs px-1"}>Pre-commute</p>;
+        return (
+          <a href="/commute">
+            <p className={"border rounded-md text-xs px-1"}>Pre-commute</p>
+          </a>
+        );
       }
     }
 
