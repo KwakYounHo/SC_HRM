@@ -38,6 +38,8 @@ export default function Login({
     return redirect("/login");
   };
 
+  const roleOption = ["editor", "interpreter", "influencer", "manager"];
+
   return (
     <div className="flex-1 flex flex-col w-full px-8 sm:max-w-md justify-center gap-2">
       <Link
@@ -98,9 +100,13 @@ export default function Login({
           title="role"
           className="rounded-md px-4 py-2 bg-inherit border mb-6"
         >
-          <option value="editor">Editor</option>
-          <option value="interpreter">Interpreter</option>
-          <option value="manager">Manager</option>
+          {roleOption.map((element, i) => {
+            return (
+              <option key={i} value={element} className={"capitalize"}>
+                {element}
+              </option>
+            );
+          })}
         </select>
 
         <SubmitButton

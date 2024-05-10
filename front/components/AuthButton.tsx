@@ -75,7 +75,7 @@ export default async function AuthButton(): Promise<JSX.Element> {
 
   return user ? (
     <div className={"flex items-center gap-4"}>
-      <p>Hello, {userName()}!</p>
+      <p className={"text-sm md:text-base"}>Hello, {userName()}!</p>
       {commuteStatus()}
       <form action={signOut}>
         <button

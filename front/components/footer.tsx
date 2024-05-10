@@ -19,7 +19,7 @@ export default function Footer(): JSX.Element {
   return (
     <div
       className={
-        "w-full bg-background border-t px-8 py-4 text-xs flex justify-between items-center"
+        "w-full bg-background border-t px-8 py-4 text-xs flex flex-col justify-between items-center gap-4 md:flex-row  md:gap-0"
       }
     >
       <div>

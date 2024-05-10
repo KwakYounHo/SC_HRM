@@ -20,7 +20,7 @@ export async function FacebookQR({ className }: Props): Promise<JSX.Element> {
         src={imgURL}
         width={500}
         height={500}
-        className={className}
+        className={`${className} bg-white p-1 border rounded-md`}
         alt={"Facebook QR Code Img download failed"}
       />
     </div>
