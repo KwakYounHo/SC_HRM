@@ -38,7 +38,7 @@ export default function Login({
       );
     }
 
-    return redirect("/login");
+    return redirect("/login?message=please check your E-mail");
   };
 
   const positionOption = ["editor", "interpreter", "influencer", "manager"];
