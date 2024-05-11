@@ -45,24 +45,24 @@ export type Database = {
         Row: {
           access_level: number
           joindate: string
+          position: string
           quietdate: string | null
-          role: string
           user_id: string
           user_name: string
         }
         Insert: {
           access_level?: number
           joindate?: string
+          position: string
           quietdate?: string | null
-          role: string
           user_id: string
           user_name: string
         }
         Update: {
           access_level?: number
           joindate?: string
+          position?: string
           quietdate?: string | null
-          role?: string
           user_id?: string
           user_name?: string
         }

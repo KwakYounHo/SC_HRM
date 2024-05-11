@@ -16,7 +16,7 @@ export default function Login({
     const email = formData.get("email") as string;
     const password = formData.get("password") as string;
     const username = formData.get("userName") as string;
-    const role = formData.get("role") as string;
+    const position = formData.get("position") as string;
     const supabase = createClient();
 
     const { error } = await supabase.auth.signUp({
@@ -26,19 +26,22 @@ export default function Login({
         emailRedirectTo: `${origin}/auth/callback`,
         data: {
           user_name: username,
-          role,
+          position,
         },
       },
     });
 
     if (error) {
-      return redirect("/login?message=Could not authenticate user");
+      console.error(error);
+      return redirect(
+        "/signup?message=Failed sign up because something error. please retry"
+      );
     }
 
     return redirect("/login");
   };
 
-  const roleOption = ["editor", "interpreter", "influencer", "manager"];
+  const positionOption = ["editor", "interpreter", "influencer", "manager"];
 
   return (
     <div className="flex-1 flex flex-col w-full px-8 sm:max-w-md justify-center gap-2">
@@ -92,15 +95,15 @@ export default function Login({
           placeholder="ex) JUNO"
           required
         />
-        <label className="text-md" htmlFor="role">
-          Role
+        <label className="text-md" htmlFor="position">
+          Position
         </label>
         <select
-          name="role"
-          title="role"
+          name="position"
+          title="position"
           className="rounded-md px-4 py-2 bg-inherit border mb-6"
         >
-          {roleOption.map((element, i) => {
+          {positionOption.map((element, i) => {
             return (
               <option key={i} value={element} className={"capitalize"}>
                 {element}
@@ -117,7 +120,7 @@ export default function Login({
           Sign Up
         </SubmitButton>
         {searchParams?.message && (
-          <p className="mt-4 p-4 bg-foreground/10 text-foreground text-center">
+          <p className="mt-4 p-4 bg-foreground/10 text-foreground text-center text-red-400">
             {searchParams.message}
           </p>
         )}
