@@ -3,7 +3,6 @@ import Link from "next/link";
 import TodayCommute from "@/app/components/todayCommute";
 import CurrentMonthCommute from "@/app/components/currentMonthCommute";
 import { timeZoneCalculate } from "@/utils/cal/timeCode";
-import { TodayEmployeesCommute } from "@/app/components/adminCommuteChart";
 
 export default async function Home(): Promise<JSX.Element> {
   const supabase = createClient();
@@ -72,7 +71,14 @@ export default async function Home(): Promise<JSX.Element> {
         todayDate={todayDate}
       />
       {(await isAdmin()) ? (
-        <TodayEmployeesCommute supabase={supabase} todayDate={todayDate} />
+        <Link
+          href={"/admin"}
+          className={
+            "w-full border rounded-md bg-background text-center p-2 hover:bg-slate-400 hover:text-white duration-300 hover:border-btn-background-hover"
+          }
+        >
+          <button>Management Page</button>
+        </Link>
       ) : (
         <></>
       )}
