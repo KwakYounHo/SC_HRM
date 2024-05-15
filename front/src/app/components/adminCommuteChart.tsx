@@ -36,14 +36,12 @@ export async function TodayEmployeesCommute({
       </p>
       <table className={"border-collapse table-auto w-full"}>
         <thead>
-          <tr>
+          <tr className={"border"}>
             {todayEmployeesCommuteColumn.map((element, i) => {
               return (
                 <th
                   key={i}
-                  className={
-                    "border bg-slate-200 dark:bg-gray-200 p-2 capitalize"
-                  }
+                  className={"bg-slate-200 dark:bg-gray-200 p-2 capitalize"}
                 >
                   {element}
                 </th>

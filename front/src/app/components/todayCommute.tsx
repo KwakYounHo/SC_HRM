@@ -47,13 +47,11 @@ export default async function TodayCommute({
       </p>
       <table className={"border-collapse table-auto w-full"}>
         <thead className={"text-sm"}>
-          <tr>
+          <tr className={"border"}>
             {tableColumn.map((element, i) => {
               return (
                 <th
-                  className={
-                    "border p-2 bg-slate-200 dark:bg-gray-900 capitalize"
-                  }
+                  className={"p-2 bg-slate-200 dark:bg-gray-900 capitalize"}
                   key={i}
                 >
                   {element}

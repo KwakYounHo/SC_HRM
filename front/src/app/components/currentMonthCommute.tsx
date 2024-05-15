@@ -58,13 +58,11 @@ export default async function CurrentMonthCommute({
       </p>
       <table className={"border-collapse table-auto w-full"}>
         <thead>
-          <tr>
+          <tr className={"border"}>
             {tableColumn.map((element, i) => {
               return (
                 <th
-                  className={
-                    "border capitalize bg-slate-200 dark:bg-gray-900 p-2"
-                  }
+                  className={"capitalize bg-slate-200 dark:bg-gray-900 p-2"}
                   key={i}
                 >
                   {element}
