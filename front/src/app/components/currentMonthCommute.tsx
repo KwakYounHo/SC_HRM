@@ -54,7 +54,9 @@ export default async function CurrentMonthCommute({
         id={"current-month-commute"}
         className={"capitalize text-lg border-b mb-2"}
       >
-        <a href="#current-month-commute">#current month commute</a>
+        <a href="#current-month-commute">
+          #current month commute : {`${todayDate.year}-${todayDate.month}`}
+        </a>
       </p>
       <table className={"border-collapse table-auto w-full"}>
         <thead>

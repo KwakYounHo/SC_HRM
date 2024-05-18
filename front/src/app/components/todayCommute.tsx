@@ -43,7 +43,10 @@ export default async function TodayCommute({
   return (
     <div className={"my-10"}>
       <p id={"today-commute"} className={"capitalize text-lg border-b mb-2"}>
-        <a href="#today-commute">#today commute</a>
+        <a href="#today-commute">
+          #today commute :{" "}
+          {`${todayDate.year}-${todayDate.month}-${todayDate.day}`}
+        </a>
       </p>
       <table className={"border-collapse table-auto w-full"}>
         <thead className={"text-sm"}>
