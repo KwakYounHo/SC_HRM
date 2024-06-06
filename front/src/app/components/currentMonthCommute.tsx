@@ -22,7 +22,6 @@ export default async function CurrentMonthCommute({
     .select("arrival, departure")
     .eq("user_id", user.id)
     .gte("arrival", `${forQueryDate}-01T00:00:00+06:30`)
-    .lt("arrival", `${forQueryDate}-31T23:59:59+06:30`)
     .order("arrival", { ascending: false });
 
   let tableRows;
