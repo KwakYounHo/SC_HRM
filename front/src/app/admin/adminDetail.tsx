@@ -34,7 +34,7 @@ export async function EmployeesMember({
               return (
                 <th
                   key={i}
-                  className={"bg-slate-200 dark:bg-gray-200 p-2 capitalize"}
+                  className={"bg-slate-200 dark:bg-gray-900 p-2 capitalize"}
                 >
                   {element}
                 </th>
@@ -109,7 +109,7 @@ export async function TodayEmployeesCommute({
               return (
                 <th
                   key={i}
-                  className={"bg-slate-200 dark:bg-gray-200 p-2 capitalize"}
+                  className={"bg-slate-200 dark:bg-gray-900 p-2 capitalize"}
                 >
                   {element}
                 </th>
