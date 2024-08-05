@@ -5,7 +5,7 @@ export default function Header() {
   return (
     <header
       className={
-        "w-full p-2 flex justify-around border-b sticky top-0 bg-background z-[9999]"
+        "w-full p-2 flex justify-around border-b sticky top-0 bg-background z-30]"
       }
     >
       <Link className={"flex flex-col"} href="/">
