@@ -41,7 +41,13 @@ export default function Login({
     return redirect("/login?message=please check your E-mail");
   };
 
-  const positionOption = ["editor", "interpreter", "influencer", "manager"];
+  const positionOption = [
+    "editor",
+    "interpreter",
+    "influencer",
+    "manager",
+    "marketing staff",
+  ];
 
   return (
     <div className="flex-1 flex flex-col w-full px-8 sm:max-w-md justify-center gap-2">
