@@ -17,6 +17,7 @@ export async function EmployeesMember({
   const { data } = await supabase
     .from("users")
     .select("user_name, joindate, position")
+    .gte("access_level", 1)
     .lte("access_level", 3)
     .order("joindate", { ascending: true });
 
